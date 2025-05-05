@@ -1,3 +1,2 @@
 # Projek-DDAP
-Website DDAP Tugas DDAP g ada apa apa g ada flag<br>
-nigger
+Website DDAP Tugas DDAP g ada apa apa g ada flag
