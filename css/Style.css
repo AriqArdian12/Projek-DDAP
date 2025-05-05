@@ -1,0 +1,164 @@
+:root {
+    --primary-green: #4CAF50;
+    --dark-green: #2E7D32;
+    --light-green: #8BC34A;
+    --accent-brown: #795548;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.heading-font {
+    font-family: 'Playfair Display', serif;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh; /* Increased from 80vh to 100vh */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.stat-card:hover .stat-number {
+    transform: scale(1.1);
+}
+
+.stat-number {
+    transition: transform 0.3s ease;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-green);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.btn-hover {
+    transition: all 0.3s ease;
+}
+
+.btn-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.custom-image-size {
+    width: 472.33px;
+    height: 354.47px;
+}
+
+.carousel-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.carousel-track {
+    display: flex;
+    width: calc(100vw * 6); /* total gambar */
+    animation: carouselLoop 30s linear infinite;
+    height: 100%; /* Ensure full height */
+}
+
+.carousel-image {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+@keyframes carouselLoop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-300vw); } /* geser sepanjang 3 gambar */
+}
+
+/* Adding a semi-transparent overlay to improve text readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+    z-index: 1;
+}
+
+/* Ensure content is above the overlay */
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Improved carousel edge gradients */
+.carousel-wrapper::before,
+.carousel-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.carousel-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.6), transparent);
+}
+
+.carousel-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(0,0,0,0.6), transparent);
+}
+
+/* Make sure images take up full viewport height on mobile */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100vh;
+    }
+    
+    .carousel-image {
+        height: 100vh;
+    }
+}
