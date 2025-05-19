@@ -15,10 +15,12 @@ body {
 }
 
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1476231682824-37e0bc4606e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-    background-size: cover;
-    background-position: center;
-    min-height: 80vh;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh; /* Increased from 80vh to 100vh */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-hover:hover {
@@ -79,4 +81,84 @@ body {
 .custom-image-size {
     width: 472.33px;
     height: 354.47px;
+}
+
+.carousel-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.carousel-track {
+    display: flex;
+    width: calc(100vw * 6); /* total gambar */
+    animation: carouselLoop 30s linear infinite;
+    height: 100%; /* Ensure full height */
+}
+
+.carousel-image {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+@keyframes carouselLoop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-300vw); } /* geser sepanjang 3 gambar */
+}
+
+/* Adding a semi-transparent overlay to improve text readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+    z-index: 1;
+}
+
+/* Ensure content is above the overlay */
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Improved carousel edge gradients */
+.carousel-wrapper::before,
+.carousel-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.carousel-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.6), transparent);
+}
+
+.carousel-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(0,0,0,0.6), transparent);
+}
+
+/* Make sure images take up full viewport height on mobile */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100vh;
+    }
+    
+    .carousel-image {
+        height: 100vh;
+    }
 }
