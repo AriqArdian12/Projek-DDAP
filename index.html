@@ -8,8 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Title Icon -->
-     <link rel="icon" type="image/png" href="images/—Pngtree—green leaf icon graphic design_3990501.png">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     
@@ -221,8 +219,8 @@
                 <p class="text-gray-600 mb-4">
                   The current rate of biodiversity loss is unprecedented in human history. Species are disappearing at 100 to 1,000 times the natural background rate.
                 </p>
-                <div class="bg-green-50 border-l-4 border-green-600 p-4">
-                  <p class="text-green-800 italic">
+                <div class="bg-red-50 border-l-4 border-red-500 p-4">
+                  <p class="text-red-800 italic">
                     "The loss of biodiversity threatens all life on Earth, including humans. We depend on nature for our food, clean air, water, and medicines."
                   </p>
                 </div>
@@ -297,8 +295,8 @@
             <div class="mt-12 bg-green-100 rounded-lg p-8 max-w-4xl mx-auto">
                 <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center heading-font">Join Our Newsletter</h3>
                 <p class="text-gray-600 mb-6 text-center">Stay updated on conservation efforts and learn more ways to protect life on land.</p>
-                <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-                    <input id="newsletter-email" type="email" placeholder="Your email address" class="flex-grow px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+                <form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500">
                     <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 btn-hover">Subscribe</button>
                 </form>
             </div>
@@ -400,40 +398,4 @@
 
     <!-- External JavaScript file (relative path) -->
     <script src="Js\Script.js"></script>
-    <script>
-
-// Newsletter subscribe logic with in-page redirect message
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('newsletter-form');
-    const emailInput = document.getElementById('newsletter-email');
-    if (form && emailInput) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = emailInput.value.trim();
-            if (email.includes('@')) {
-                // Clear body and show subscribe message
-                document.body.innerHTML = `
-                    <div style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#f0fdf4;">
-                        <h1 style="font-size:2rem;font-weight:bold;color:#166534;margin-bottom:1rem;">You are subscribed!</h1>
-                        <p id="redirect-msg" style="font-size:1.25rem;color:#166534;">Redirecting in <span id="countdown">5</span>...</p>
-                    </div>
-                `;
-                let count = 5;
-                const countdownEl = document.getElementById('countdown');
-                const interval = setInterval(() => {
-                    count--;
-                    if (countdownEl) countdownEl.textContent = count;
-                    if (count <= 0) {
-                        clearInterval(interval);
-                        window.location.href = window.location.pathname + window.location.search;
-                    }
-                }, 1000);
-            } else {
-                alert('Please enter a valid email address.');
-            }
-        });
-    }
-});
-</script>
 </body>
-</html>
