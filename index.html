@@ -20,9 +20,10 @@
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="images\15.png" alt="SDG 15 Logo" class="h-12 mr-3">
-                <a href="#" class="text-xl font-bold text-gray-800 heading-font">Life on Land</a>
+                <img src="https://www.its.ac.id/sustainability/wp-content/uploads/sites/120/2020/08/SDG_15-1024x1024.png" class="h-12 mr-3">
+                <span class="text-xl font-semibold heading-font">Life on Land</span>
             </div>
+
             
             <div class="hidden md:flex space-x-8">
                 <a href="#about" class="text-gray-700 hover:text-green-600 nav-link">About</a>
@@ -49,31 +50,34 @@
 
     <!-- Hero Section -->
 <section class="hero flex items-center justify-center text-center text-white">
+    <div class="absolute inset-0 flex items-center justify-between px-4 z-20">
+    <button id="prevBtn" class="text-white text-3xl p-2 hover:bg-opacity-50 transition">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button id="nextBtn" class="text-white text-3xl p-2 hover:bg-opacity-50 transition">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</div>
 
     <!-- Carousel Background Start -->
-    <div class="carousel-wrapper">
-        <div class="carousel-track">
-            <img class="carousel-image" src="https://images.pexels.com/photos/15373902/pexels-photo-15373902/free-photo-of-bidang-lahan-padang-lapangan.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Slide 1">
-            <img class="carousel-image" src="https://images.pexels.com/photos/28624167/pexels-photo-28624167.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Slide 2">
-            <img class="carousel-image" src="https://images.pexels.com/photos/14386059/pexels-photo-14386059.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Slide 3">
-            <img class="carousel-image" src="https://images.pexels.com/photos/15373902/pexels-photo-15373902/free-photo-of-bidang-lahan-padang-lapangan.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Slide 1 Duplicate">
-            <img class="carousel-image" src="https://images.pexels.com/photos/28624167/pexels-photo-28624167.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Slide 2 Duplicate">
-            <img class="carousel-image" src="https://images.pexels.com/photos/14386059/pexels-photo-14386059.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Slide 3 Duplicate">
-        </div>
+<div class="carousel-wrapper">
+    <div class="carousel-track" id="carousel-track">
+        <img class="carousel-image" src="https://images.pexels.com/photos/28624167/pexels-photo-28624167.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Slide 0">
+        <img class="carousel-image" src="https://images.pexels.com/photos/15373902/pexels-photo-15373902/free-photo-of-bidang-lahan-padang-lapangan.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Slide 1">
+        <img class="carousel-image" src="https://images.pexels.com/photos/28624167/pexels-photo-28624167.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Slide 2">
+        <img class="carousel-image" src="https://images.pexels.com/photos/14386059/pexels-photo-14386059.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Slide 3">
     </div>
-    <!-- Carousel Background End -->
+</div>
+<!-- Carousel Background End -->
 
     <div class="container mx-auto px-4">
         <!-- Existing heading and buttons here -->
 
     <!-- Content -->
+     <!-- Content -->
     <div class="container mx-auto px-4 relative z-10">
         <h1 class="text-4xl md:text-6xl font-bold mb-6 heading-font animate__animated animate__fadeIn">Protect Life on Land</h1>
         <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Sustainable Development Goal 15 aims to protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss.</p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#actions" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 btn-hover">Take Action</a>
-            <a href="#about" class="bg-transparent hover:bg-white hover:text-green-700 text-white font-bold py-3 px-6 border-2 border-white rounded-full transition duration-300 btn-hover">Learn More</a>
-        </div>
     </div>
 </section>
 
@@ -189,8 +193,8 @@
     </section>
 
     <!-- Importance Section -->
-    <section id="importance" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
+    <section id="importance" class="bg-gray-100">
+        <div class="">
           <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 heading-font">Why It Matters</h2>
             <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
@@ -199,55 +203,62 @@
             </p>
           </div>
       
-          <div class="flex flex-col lg:flex-row gap-8 items-stretch">
-            <!-- Kolom kiri -->
-            <div class="lg:w-1/2 flex flex-col gap-6">
-              <div class="bg-white p-8 rounded-lg shadow-lg flex-1">
-                <h3 class="text-2xl font-bold text-gray-800 mb-4 heading-font">Ecosystem Services</h3>
-                <p class="text-gray-600 mb-4">
-                  Healthy terrestrial ecosystems provide essential services including clean air and water, food, medicines, and climate regulation. Forests alone absorb about 2 billion tons of CO2 annually.
-                </p>
-                <ul class="list-disc pl-5 text-gray-600 space-y-2">
-                  <li>Forests regulate local and global climate</li>
-                  <li>Wetlands filter pollutants from water</li>
-                  <li>Soil organisms maintain soil fertility</li>
-                  <li>Pollinators ensure food production</li>
-                </ul>
-              </div>
-      
-              <div class="bg-white p-8 rounded-lg shadow-lg flex-1">
-                <h3 class="text-2xl font-bold text-gray-800 mb-4 heading-font">Biodiversity Crisis</h3>
-                <p class="text-gray-600 mb-4">
-                  The current rate of biodiversity loss is unprecedented in human history. Species are disappearing at 100 to 1,000 times the natural background rate.
-                </p>
-                <div class="bg-green-50 border-l-4 border-green-600 p-4 mt-12">
-                  <p class="text-green-800 italic">
-                    "The loss of biodiversity threatens all life on Earth, including humans. We depend on nature for our food, clean air, water, and medicines."
-                  </p>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Kolom kanan (gambar) -->
-            <div class="lg:w-1/2 flex flex-col gap-6">
-              <div class="flex-1">
-                <img
-                  src="https://images.pexels.com/photos/1374295/pexels-photo-1374295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  alt="Wildlife"
-                  class="w-full h-full max-h-[400px] object-cover rounded-lg shadow-xl"
-                />
-              </div>
-              <div class="flex-1">
-                <img
-                  src="https://images.pexels.com/photos/11836032/pexels-photo-11836032.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Forest"
-                  class="w-full h-full max-h-[400px] object-cover rounded-lg shadow-xl"
-                />
-              </div>
-            </div>
-          </div>
+          <section class="py-16 bg-gray-100">
+  <div class="container mx-auto px-6 max-w-7xl">
+    <div class="grid gap-6 md:grid-cols-2">
+      <!-- Ecosystem Services -->
+      <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4 heading-font">Ecosystem Services</h3>
+          <p class="text-gray-600 mb-4">
+            Healthy terrestrial ecosystems provide essential services including clean air and water, food, medicines, and climate regulation. Forests alone absorb about 2 billion tons of CO2 annually.
+          </p>
+          <ul class="list-disc pl-5 text-gray-600 space-y-2">
+            <li>Forests regulate local and global climate</li>
+            <li>Wetlands filter pollutants from water</li>
+            <li>Soil organisms maintain soil fertility</li>
+            <li>Pollinators ensure food production</li>
+          </ul>
         </div>
-      </section>
+      </div>
+
+      <!-- Gambar 1 -->
+      <div class="flex">
+        <img
+          src="https://images.pexels.com/photos/1374295/pexels-photo-1374295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt="Wildlife"
+          class="w-full h-full object-cover rounded-lg shadow-xl"
+        />
+      </div>
+
+      <!-- Biodiversity Crisis -->
+      <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4 heading-font">Biodiversity Crisis</h3>
+          <p class="text-gray-600 mb-4">
+            The current rate of biodiversity loss is unprecedented in human history. Species are disappearing at 100 to 1,000 times the natural background rate.
+          </p>
+        </div>
+        <div class="bg-green-50 border-l-4 border-green-600 p-4 mt-6">
+          <p class="text-green-800 italic">
+            "The loss of biodiversity threatens all life on Earth, including humans. We depend on nature for our food, clean air, water, and medicines."
+          </p>
+        </div>
+      </div>
+
+      <!-- Gambar 2 -->
+      <div class="flex">
+        <img
+          src="https://images.pexels.com/photos/11836032/pexels-photo-11836032.jpeg?auto=compress&cs=tinysrgb&w=800"
+          alt="Forest"
+          class="w-full h-full object-cover rounded-lg shadow-xl"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+
       
       
     <!-- Take Action Section -->
@@ -345,8 +356,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4">
+<footer class="bg-gray-800 text-white py-12">
+    <div class="w-full">
+        <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4 heading-font">SDG 15: Life on Land</h3>
@@ -385,12 +397,19 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2023 Life on Land Initiative. All rights reserved. | <a href="#" class="hover:text-white">Privacy Policy</a> | <a href="#" class="hover:text-white">Terms of Service</a></p>
+                <p>&copy; 2023 Life on Land Initiative. All rights reserved. | 
+                    <a href="#" class="hover:text-white">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                </p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
+
+
+
 
     <!-- Back to Top Button -->
     <button id="back-to-top" class="fixed bottom-8 right-8 bg-green-600 text-white p-3 rounded-full shadow-lg hidden">
